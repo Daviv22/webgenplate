@@ -1,6 +1,6 @@
 from pathlib import Path
 
-TEMPLATE_HTML_FILE = Path('boilerplates/html_boilerplate.txt')
+BOILERPLATE_HTML_FILE = Path(__file__).parent / "boilerplates" / "html_boilerplate.txt"
 
 def basic_project(base):
     for folder in ["js", "css", "assets"]:
@@ -13,7 +13,7 @@ COMMANDS = {
 }
 def insert_boilerplate(directory):
     destiny = directory / 'index.html'
-    destiny.write_text(TEMPLATE_HTML_FILE.read_text())
+    destiny.write_text(BOILERPLATE_HTML_FILE.read_text())
 
 def create_project(directory, template):
     base = Path(directory)
