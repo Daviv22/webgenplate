@@ -6,6 +6,9 @@ def basic_project(base):
     for folder in ["js", "css", "assets"]:
         (base / folder).mkdir(parents=True, exist_ok=True)
 
+    (base / 'js' / 'script.js').touch()
+    (base / 'css' / 'style.css').touch()
+
     insert_boilerplate(base)
 
 COMMANDS = {
