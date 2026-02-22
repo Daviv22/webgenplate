@@ -20,10 +20,7 @@ def create_project(directory, template):
 
     template_type = COMMANDS.get(template)
 
-    if template_type:
-        template_type(base)
-    else:
-        return
+    template_type(base)
 
     (base / 'README.md').touch()
 
