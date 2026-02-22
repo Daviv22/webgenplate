@@ -1,21 +1,19 @@
 from pathlib import Path
 
+TEMPLATE_HTML_FILE = Path('boilerplates/boilerplate_html.txt')
+
 def insert_boilerplate(directory):
-    with open('boilerplates/boilerplate_html.txt', 'r') as origin:
-        with open(f'{directory}/index.html', 'a') as destiny:
-            for line in origin:
-                destiny.write(line)
+    destiny = directory / 'index.html'
+    destiny.write_text(TEMPLATE_HTML_FILE.read_text())
 
 def create_project():
-    base = Path('.')
+    base = Path('teste')
 
     for folder in ["js", "css", "assets"]:
         (base / folder).mkdir(parents=True, exist_ok=True)
 
     (base / 'README.md').touch()
 
-    arquivo = (base / 'index.html')
-    arquivo.touch()
     insert_boilerplate(base)
 
 create_project()
