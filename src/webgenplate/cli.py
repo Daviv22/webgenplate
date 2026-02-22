@@ -1,5 +1,5 @@
 import argparse
-from generator import  create_project
+from .generator import create_project
 
 def main():
     parser = argparse.ArgumentParser(
