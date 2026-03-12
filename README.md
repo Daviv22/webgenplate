@@ -14,6 +14,8 @@ meu-projeto/
 ├── js/
 │   └── script.js
 ├── assets/
+│   └── images/
+│   └── icons/
 └── README.md
 ```
 
