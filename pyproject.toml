@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "webgenplate"
-version = "0.2.0"
+version = "0.2.1"
 description = "CLI tool to generate simple web project templates"
 authors = [
     { name = "Davi Vitorino" }
