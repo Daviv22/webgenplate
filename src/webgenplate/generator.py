@@ -3,7 +3,7 @@ from pathlib import Path
 BOILERPLATE_HTML_FILE = Path(__file__).parent / "boilerplates" / "html_boilerplate.txt"
 
 def basic_project(base):
-    for folder in ["js", "css", "assets"]:
+    for folder in ["js", "css", "assets/images", "assets/icons"]:
         (base / folder).mkdir(parents=True, exist_ok=True)
 
     (base / 'js' / 'script.js').touch()
@@ -14,6 +14,7 @@ def basic_project(base):
 COMMANDS = {
     "basic": basic_project
 }
+
 def insert_boilerplate(directory):
     destiny = directory / 'index.html'
     destiny.write_text(BOILERPLATE_HTML_FILE.read_text())
