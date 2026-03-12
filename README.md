@@ -1,6 +1,6 @@
 # webgenplate
 
-CLI tool para geração de templates de projetos web simples. Com um único comando, o **webgenplate** cria a estrutura de pastas e arquivos necessários para começar um projeto front-end do zero.
+CLI tool para geração de templates de projetos web simples. Com um único comando, o **webgenplate** cria a estrutura de pastas e arquivos necessários para começar um projeto web básico (HTML, CSS, JS) do zero.
 
 ## Estrutura gerada
 
